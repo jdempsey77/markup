@@ -18,61 +18,61 @@ flowchart LR
 
   %% Agents per phase
   %% PLAN
-  A --- A1[Roadmapping Agent\n(security reqs, risk hints)]
-  A --- A2[Policy Scout\n(baselines, standards lookup)]
+  A --- A1["Roadmapping Agent<br/>(security reqs, risk hints)"]
+  A --- A2["Policy Scout<br/>(baselines, standards lookup)"]
   A1:::agent
   A2:::agent
 
   %% DESIGN
-  B --- B1[Design Reviewer\n(threat modeling, patterns)]
-  B --- B2[Cloud/IaC Architect\n(ref arch, guardrails)]
-  B --- B3[Abuse Case Writer\n(attacker POV prompts)]
+  B --- B1["Design Reviewer<br/>(threat modeling, patterns)"]
+  B --- B2["Cloud/IaC Architect<br/>(ref arch, guardrails)"]
+  B --- B3["Abuse Case Writer<br/>(attacker POV prompts)"]
   B1:::agent
   B2:::agent
   B3:::agent
 
   %% BUILD
-  C --- C1[Code Reviewer (AppSec)\nSAST, secrets, lint, PR tips]
-  C --- C2[Supply Chain Sentinel\nSCA, licenses, SBOM]
-  C --- C3[IaC Linter\nTerraform/K8s/Docker checks]
+  C --- C1["Code Reviewer (AppSec)<br/>SAST, secrets, lint, PR tips"]
+  C --- C2["Supply Chain Sentinel<br/>SCA, licenses, SBOM"]
+  C --- C3["IaC Linter<br/>Terraform/K8s/Docker checks"]
   C1:::agent
   C2:::agent
   C3:::agent
 
   %% TEST
-  D --- D1[DAST/API Fuzzer\nauth flows, headers, OWASP]
-  D --- D2[Runtime Posture Check\nimages, configs, drift]
-  D --- D3[Finding Correlator\nde-dupe, enrich, group]
+  D --- D1["DAST/API Fuzzer<br/>auth flows, headers, OWASP"]
+  D --- D2["Runtime Posture Check<br/>images, configs, drift"]
+  D --- D3["Finding Correlator<br/>de-dupe, enrich, group"]
   D1:::agent
   D2:::agent
   D3:::agent
 
   %% RELEASE
-  E --- E1[Release Gatekeeper\npolicy-as-code, exceptions]
-  E --- E2[Risk Notary\nrisk memo, evidence pack]
+  E --- E1["Release Gatekeeper<br/>policy-as-code, exceptions"]
+  E --- E2["Risk Notary<br/>risk memo, evidence pack"]
   E1:::agent
   E2:::agent
 
   %% DEPLOY
-  F --- F1[Deploy Guardian\nWAAP/WAF rules, secrets OK?]
-  F --- F2[Provenance Verifier\nsigning, SBOM attestation]
-  F --- F3[Ops Handoff Coach\nplaybooks, monitors]
+  F --- F1["Deploy Guardian<br/>WAAP/WAF rules, secrets OK?"]
+  F --- F2["Provenance Verifier<br/>signing, SBOM attestation"]
+  F --- F3["Ops Handoff Coach<br/>playbooks, monitors"]
   F1:::agent
   F2:::agent
   F3:::agent
 
   %% OPERATE
-  G --- G1[Detection Analyst\nsignals→hypotheses]
-  G --- G2[Vuln Intake Router\nprioritize, route, SLAs]
-  G --- G3[Drift Watcher\nconfig & posture variance]
+  G --- G1["Detection Analyst<br/>signals→hypotheses"]
+  G --- G2["Vuln Intake Router<br/>prioritize, route, SLAs"]
+  G --- G3["Drift Watcher<br/>config & posture variance"]
   G1:::agent
   G2:::agent
   G3:::agent
 
   %% RETIRE
-  H --- H1[Decom Planner\nchecklist, access teardown]
-  H --- H2[Data Steward\nretention/purge, DPIA refs]
-  H --- H3[Legacy Watch\nEOL comps, CVE watchlist]
+  H --- H1["Decom Planner<br/>checklist, access teardown"]
+  H --- H2["Data Steward<br/>retention/purge, DPIA refs"]
+  H --- H3["Legacy Watch<br/>EOL comps, CVE watchlist"]
   H1:::agent
   H2:::agent
   H3:::agent
