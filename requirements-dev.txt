@@ -1,0 +1,26 @@
+-r requirements.txt
+
+# Development Tools
+ipython>=8.17.2
+ipdb>=0.13.13
+jupyter>=1.0.0
+
+# Testing
+pytest-watch>=4.2.0
+faker>=20.1.0
+factory-boy>=3.3.0
+
+# Code Quality
+pre-commit>=3.5.0
+autopep8>=2.0.4
+isort>=5.12.0
+
+# Documentation
+mkdocs>=1.5.3
+mkdocs-material>=9.4.14
+mkdocstrings[python]>=0.24.0
+
+# Type Checking
+types-requests>=2.31.0
+types-PyYAML>=6.0.12
+
